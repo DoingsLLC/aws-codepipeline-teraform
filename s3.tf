@@ -3,7 +3,7 @@
 ################################################################################
 
 resource "aws_s3_bucket" "this" {
-  bucket_prefix = trunc(37, trimspace(var.application_name))
+  bucket_prefix = slice(var.application_name, 0, 37)
 
   force_destroy = true
 }
