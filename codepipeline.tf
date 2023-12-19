@@ -30,7 +30,7 @@ resource "aws_codepipeline" "this" {
       output_artifacts = ["SOURCE_ARTIFACT"]
       configuration = {
         RepositoryName       = aws_codecommit_repository.this.repository_name
-        BranchName           = "master"
+        BranchName           = "main"
         PollForSourceChanges = true
         OutputArtifactFormat = "CODE_ZIP"
       }
